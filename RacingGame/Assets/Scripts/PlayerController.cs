@@ -7,14 +7,11 @@ public class PlayerController : MonoBehaviour
 {
   Rigidbody rb;
   [SerializeField] float movementSpeed = 6f;
-
-    // Start is called before the first frame update
     void Start()
     {
       rb = GetComponent<Rigidbody>(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
       //Player movement
@@ -24,6 +21,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
     }
 
+    //Checks Collision with the Enemy Car
      void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
