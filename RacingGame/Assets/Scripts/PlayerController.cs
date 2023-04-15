@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+          SceneManager.LoadScene(0);
+        }
     }
 
     //Checks Collision with the Enemy Car
