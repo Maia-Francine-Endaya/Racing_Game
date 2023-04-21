@@ -8,7 +8,12 @@ public class PlayerController : MonoBehaviour
   Rigidbody rb;
   [SerializeField] float movementSpeed = 6f;
 
-    void Update()
+  void Start()
+    {
+      rb = GetComponent<Rigidbody>(); 
+    }
+  
+  void Update()
     {
       //Player movement
         float horizontalInput = Input.GetAxis("Horizontal");

@@ -1485,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Booster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3947d3c65c70413299d92f97f9a7e3f, type: 3}
+      propertyPath: m_TagString
+      value: Boost
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3947d3c65c70413299d92f97f9a7e3f, type: 3}
 --- !u!4 &863779271 stripped
@@ -1558,6 +1562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b3947d3c65c70413299d92f97f9a7e3f, type: 3}
       propertyPath: m_Name
       value: Booster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3947d3c65c70413299d92f97f9a7e3f, type: 3}
+      propertyPath: m_TagString
+      value: Boost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3947d3c65c70413299d92f97f9a7e3f, type: 3}
