@@ -21,8 +21,6 @@ public class AIScript : MonoBehaviour
     //Casts an area to detect obstacles
     RaycastHit hit;
 
-    //TO DO: Fix the layermask on this code
-
     //Using the raycast, the object detects if there is an obstacle in its path
     if(Physics.SphereCast(transform.position, spherecastRadius, direction, out hit, raycastDistance, obstacleMask))
     {
