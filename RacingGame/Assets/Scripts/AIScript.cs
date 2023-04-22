@@ -20,6 +20,10 @@ public class AIScript : MonoBehaviour
   public int lapNumber;
   public int checkpointIndex;
 
+  //For speed boost
+  private float boostTimer;
+  private bool boosting;
+
   private void Start()
     {
       lapNumber = 1;
@@ -66,5 +70,28 @@ public class AIScript : MonoBehaviour
           }
         }
         transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, speed * Time.deltaTime);
+
+    //Checks how long the speed boost lasts
+    if(boosting)
+      {
+        boostTimer += Time.deltaTime;
+        if(boostTimer >= 0.5f)
+          {
+            boostTimer = 0f;
+            boosting = false;
+          }
+      }
   }
+
+  
+
+  //Gives a speed boost when colliding with a booster
+    void OnTriggerEnter(Collider other)
+    {
+      if(other.tag == "Boost")
+      {
+        boosting = true;
+        speed += 5;
+      }
+    }
 }

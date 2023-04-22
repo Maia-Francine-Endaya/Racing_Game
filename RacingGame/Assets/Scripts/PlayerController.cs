@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
         if(boosting)
         {
           boostTimer += Time.deltaTime;
-          if(boostTimer >= 1f)
+
+          if(boostTimer >= 0.5f)
           {
             boostTimer = 0f;
             boosting = false;
@@ -59,11 +60,11 @@ public class PlayerController : MonoBehaviour
       if(other.tag == "Boost")
       {
         boosting = true;
-        movementSpeed += 15;
+        movementSpeed += 5;
       }
     }
     //Checks Collision with the Enemy Car
-     void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
