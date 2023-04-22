@@ -16,6 +16,7 @@ public class AIScript : MonoBehaviour
   [SerializeField] GameObject[] waypoints;
   int currentWaypointIndex = 0;
 
+  //Laps and checkpoints for lap system
   public int lapNumber;
   public int checkpointIndex;
 

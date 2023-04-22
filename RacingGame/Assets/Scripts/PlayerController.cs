@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
   Rigidbody rb;
-  [SerializeField] float movementSpeed = 6f;
+  [SerializeField] float movementSpeed = 20f;
 
+  //Laps and checkpoints for lap system
   public int lapNumber;
   public int checkpointIndex;
+
+  //For speed boost
+  private float boostTimer;
+  private bool boosting;
 
   void Start()
     {
@@ -17,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
       lapNumber = 1;
       checkpointIndex = 0;
+
+      boostTimer = 0f;
+      boosting = false;
     }
 
   
@@ -32,8 +40,28 @@ public class PlayerController : MonoBehaviour
         {
           SceneManager.LoadScene(0);
         }
+
+        //Checks how long the speed boost lasts
+        if(boosting)
+        {
+          boostTimer += Time.deltaTime;
+          if(boostTimer >= 1f)
+          {
+            boostTimer = 0f;
+            boosting = false;
+          }
+        }
     }
 
+    //Gives a speed boost when colliding with a booster
+    void OnTriggerEnter(Collider other)
+    {
+      if(other.tag == "Boost")
+      {
+        boosting = true;
+        movementSpeed += 15;
+      }
+    }
     //Checks Collision with the Enemy Car
      void OnCollisionEnter(Collision collision)
     {
@@ -43,4 +71,6 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(collision.contacts[0].normal * 20f, ForceMode.Impulse);
         }
     }
+
+  //
 }
