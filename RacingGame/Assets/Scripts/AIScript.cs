@@ -16,6 +16,15 @@ public class AIScript : MonoBehaviour
   [SerializeField] GameObject[] waypoints;
   int currentWaypointIndex = 0;
 
+  public int lapNumber;
+  public int checkpointIndex;
+
+  private void Start()
+    {
+      lapNumber = 1;
+      checkpointIndex = 0;
+    }
+
   private void Update()
   {
     //Casts an area to detect obstacles

@@ -8,10 +8,17 @@ public class PlayerController : MonoBehaviour
   Rigidbody rb;
   [SerializeField] float movementSpeed = 6f;
 
+  public int lapNumber;
+  public int checkpointIndex;
+
   void Start()
     {
       rb = GetComponent<Rigidbody>(); 
+
+      lapNumber = 1;
+      checkpointIndex = 0;
     }
+
   
   void Update()
     {

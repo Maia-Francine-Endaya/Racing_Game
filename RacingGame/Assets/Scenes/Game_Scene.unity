@@ -792,6 +792,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
+  lapNumber: 0
+  checkpointIndex: 0
 --- !u!1 &433246844
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +806,7 @@ GameObject:
   - component: {fileID: 433246847}
   - component: {fileID: 433246846}
   - component: {fileID: 433246845}
+  - component: {fileID: 433246849}
   m_Layer: 0
   m_Name: Finish Line
   m_TagString: Untagged
@@ -889,6 +892,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433246849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433246844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e9c96143834c82a3d6c45edbf0a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoints:
+  - {fileID: 623225285}
+  - {fileID: 1623101723}
+  - {fileID: 1417828978}
+  totalLaps: 3
 --- !u!1001 &501385269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -997,6 +1017,7 @@ GameObject:
   - component: {fileID: 623225284}
   - component: {fileID: 623225283}
   - component: {fileID: 623225282}
+  - component: {fileID: 623225285}
   m_Layer: 0
   m_Name: Checkpoint_01
   m_TagString: Untagged
@@ -1082,6 +1103,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623225280}
   m_Mesh: {fileID: 0}
+--- !u!114 &623225285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623225280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87253c5d8b6644df5ab2850507189799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
 --- !u!1 &664878237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664878237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.05, y: 0, z: -12.62}
+  m_LocalPosition: {x: 125.05, y: 0, z: 4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1411,7 +1445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847756347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.479996, y: 0, z: -73.03}
+  m_LocalPosition: {x: -28.479996, y: 0, z: -78.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2037,6 +2071,8 @@ MonoBehaviour:
   - {fileID: 191134956}
   - {fileID: 998081568}
   - {fileID: 1368224642}
+  lapNumber: 0
+  checkpointIndex: 0
 --- !u!54 &1019354096
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2324,7 +2360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300730075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.720001, y: 0, z: 5.169999}
+  m_LocalPosition: {x: -28.9, y: 0, z: 5.169999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2470,6 +2506,7 @@ GameObject:
   - component: {fileID: 1417828977}
   - component: {fileID: 1417828976}
   - component: {fileID: 1417828975}
+  - component: {fileID: 1417828978}
   m_Layer: 0
   m_Name: Checkpoint_03
   m_TagString: Untagged
@@ -2555,6 +2592,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417828973}
   m_Mesh: {fileID: 0}
+--- !u!114 &1417828978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417828973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87253c5d8b6644df5ab2850507189799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
 --- !u!1001 &1454182195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2833,6 +2883,8 @@ MonoBehaviour:
   - {fileID: 191134956}
   - {fileID: 998081568}
   - {fileID: 1368224642}
+  lapNumber: 0
+  checkpointIndex: 0
 --- !u!54 &1490652434
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3061,6 +3113,7 @@ GameObject:
   - component: {fileID: 1623101722}
   - component: {fileID: 1623101721}
   - component: {fileID: 1623101720}
+  - component: {fileID: 1623101723}
   m_Layer: 0
   m_Name: Checkpoint_02
   m_TagString: Untagged
@@ -3146,6 +3199,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623101718}
   m_Mesh: {fileID: 0}
+--- !u!114 &1623101723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623101718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87253c5d8b6644df5ab2850507189799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
 --- !u!1 &1659026957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,7 +3236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659026957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.97, y: 0, z: 6.2699995}
+  m_LocalPosition: {x: 26.1, y: 0, z: 6.2699995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3433,7 +3499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665073665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 112.22, y: 0, z: 2.5}
+  m_LocalPosition: {x: 86.7, y: 0, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3867,7 +3933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052987490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.119995, y: 0, z: -25.810001}
+  m_LocalPosition: {x: -31.8, y: 0, z: -32.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4146,3 +4212,5 @@ MonoBehaviour:
   - {fileID: 191134956}
   - {fileID: 998081568}
   - {fileID: 1368224642}
+  lapNumber: 0
+  checkpointIndex: 0
